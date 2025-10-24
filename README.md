@@ -1,0 +1,157 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Student Registration</title>
+   <link rel="stylesheet" href="style.css">
+
+   <style>
+      body {
+         font-family: 'Times New Roman', Times, serif;
+         background-color: rgb(239, 198, 248);
+         background: linear-gradient(120deg, #dd9efb, #f6f6f7, #e097f4);
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         min-height: 100vh;
+         margin: 0;
+      }
+
+      .container {
+         background-color: rgb(250, 210, 255);
+         padding: 20px 30px;
+         border-radius: 4px;
+         box-shadow: 0 2px 10px rgba(56, 55, 55, 0.1);
+         background: linear-gradient(120deg, #e0c6f0, #d9c2f4, #f9bdf0);
+         width: 100%;
+         max-width: 500px;
+         border: 2px #2a282c;
+      }
+
+      h2 {
+         text-align: center;
+         color: #333;
+         margin-bottom: 20px;
+      }
+
+      .form-group {
+         margin-bottom: 15px;
+      }
+
+      label {
+         display: block;
+         margin-bottom: 5px;
+         color: #555;
+         font-weight: bold;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="date"],
+      select {
+         width: calc(100% - 22px);
+         padding: 10px;
+         border: 1px solid #b872fa;
+         border-radius: 4px;
+         box-sizing: border-box;
+         background-color: rgb(252, 217, 252);
+      }
+
+      input[type="radio"] {
+         margin-right: 5px;
+      }
+
+      .gender-group label {
+         display: inline-block;
+         margin-right: 15px;
+         font-weight: normal;
+      }
+
+      button {
+         background-color: rgb(241, 155, 241);
+         color: rgb(50, 15, 50);
+         padding: 12px 20px;
+         border: none;
+         border-radius: 4px;
+         cursor: pointer;
+         width: 100%;
+         font-size: 16px;
+      }
+
+      button:hover {
+         background-color: rgb(223, 169, 247);
+      }
+   </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2>Student Registration Form</h2>
+    <!-- Remove the action attribute so it doesn’t redirect -->
+    <form id="registrationForm">
+      <div class="form-group">
+         <label for="fullName">Full Name:</label>
+         <input type="text" id="fullName" name="fullName" required>
+      </div>
+
+      <div class="form-group">
+         <label for="email">Email:</label>
+         <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+         <label for="dob">Date of Birth:</label>
+         <input type="date" id="dob" name="dob" required>
+      </div>
+
+      <div class="form-group">
+         <label>Gender:</label>
+         <div class="gender-group">
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female">
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="gender" value="other">
+            <label for="other">Other</label>
+         </div>
+      </div>
+
+      <div class="form-group">
+         <label for="course">Course:</label>
+         <select id="course" name="course" required>
+            <option value="">Select a Course</option>
+            <option value="BIT-COMTECH">BIT-COMTECH</option>
+            <option value="BIT-ELECTRONICS">BIT-ELECTRONICS</option>
+            <option value="BSED">BSED</option>
+            <option value="BEED">BEED</option>
+            <option value="BSED-SOCSTUD">BSED-SOCSTUD</option>
+            <option value="BSTM">BSTM</option>
+            <option value="BSHM">BSHM</option>
+         </select>
+      </div>
+
+      <button type="submit">Register</button>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("registrationForm").addEventListener("submit", function(event) {
+      event.preventDefault(); 
+      alert("You are now registered!");
+      this.reset();
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
